@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Quiz App </title>
+</head>
+
+<body>
+    <div class="quiz">
+
+
+        <div class="quiz-start">
+            <div class="quiz-heading">
+                <h1 class="header"> Instructions: </h1>
+            </div>
+            <div class="quiz-rules">
+                <p class="rules">
+                    1) Attempt all questions. <br>
+                    2) Choose the best answer.
+                </p>
+            </div>
+            <div class="quiz-intruction">
+                <p class="total-question"> Total number of questions: <span class="question"> 5 </span> </p>
+            </div>
+            <div class="quiz-btn">
+                <button class="startbtn" onclick="start()"> Start </button>
+            </div>
+        </div>
+
+
+
+        <div class="quiz-question hidden">
+            <div class="question-numbers">
+
+            </div>
+            <div class="questions">
+
+            </div>
+            <div class="options">
+                <ul class="list-options">
+
+                </ul>
+            </div>
+            <div class="next">
+                <button class="nextbtn startbtn" onclick="next()"> Next </button>
+            </div>
+        </div>
+
+
+
+        <div class="quiz-end hidden">
+            <table class="result" cellspacing='0'>
+                <tr class="quizrow1 row">
+                    <td id="table-head" class="col" colspan="2">
+                        <h1> Results </h1>
+                    </td>
+                </tr>
+
+                <tr class="quizrow2 row">
+                    <td id="quizcol1" class="col"> Total Questions </td>
+                    <td id="quizcol2" class="col"> </td>
+                </tr>
+
+                <tr class="quizrow3 row">
+                    <td id="quizcol3" class="col"> Attempt Questions </td>
+                    <td id="quizcol4" class="col"> </td>
+                </tr>
+
+                <tr class="quizrow4 row">
+                    <td id="quizcol5" class="col"> Right Answers </td>
+                    <td id="quizcol6" class="col"> </td>
+                </tr>
+
+                <tr class="quizrow5 row">
+                    <td id="quizcol7" class="col"> Wrong Answers </td>
+                    <td id="quizcol8" class="col"> </td>
+                </tr>
+
+                <tr class="quizrow6 row">
+                    <td id="quizcol9" class="col"> Your Progress </td>
+                    <td id="quizcol10" class="col"> </td>
+                </tr>
+                <tr class="quizror7 row">
+                    <td id="quicol11"> <button class="startbtn" onclick="tryagain()"> Try again </button> </td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
