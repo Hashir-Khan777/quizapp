@@ -99,3 +99,10 @@ div.quiz {
 .startbtn:hover {
   background-color: #64b5f6;
 }
+
+.stopWatch {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}

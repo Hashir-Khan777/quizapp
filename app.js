@@ -41,7 +41,40 @@ var col4 = document.querySelector("#quizcol4");
 var col6 = document.querySelector("#quizcol6");
 var col8 = document.querySelector("#quizcol8");
 var col10 = document.querySelector("#quizcol10");
+var minHead = document.querySelector(".min");
+var secHead = document.querySelector(".sec");
+var msecHead = document.querySelector(".msec");
+var min = 4;
+var sec = 60;
+var msec = 0;
+var interval;
 var showquestion;
+
+// integrate stop watch
+function timer() {
+  minHead.innerHTML = min;
+  secHead.innerHTML = sec;
+  msecHead.innerHTML = msec;
+
+  msec++;
+  msecHead.innerHTML = msec;
+  if (msec >= 100) {
+    sec--;
+    secHead.innerHTML = sec;
+    msec = 0;
+  } else if (sec <= 0) {
+    min--;
+    minHead.innerHTML = min;
+    sec = 59;
+  } else if (min <= 0) {
+    end();
+    clearInterval(interval);
+  }
+}
+function onWatch() {
+  interval = setInterval(timer, 10);
+  start.setAttribute("disabled", "disabled");
+}
 
 // making for question
 var counter = 0;
@@ -107,6 +140,7 @@ function start() {
   document.querySelector(".quiz-question").classList.remove("hidden");
   pushquestion();
   setquestion();
+  onWatch();
 }
 
 // next
